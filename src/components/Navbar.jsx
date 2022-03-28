@@ -11,24 +11,37 @@ const Wrapper = styled.div`
   justify-content: space-between;
 `;
 
+const Language = styled.span`
+  font-size: 14px;
+  cursor: pointer;
+`;
+
 const Left = styled.div`
-    flex: 1;
+  flex: 1;
 `;
 const Center = styled.div`
-    flex: 1;
+  flex: 1;
 `;
 
 const Right = styled.div`
-    flex: 1;
+  flex: 1;
 `;
 
 const Navbar = () => {
   return (
     <Container>
       <Wrapper>
-          <Left>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt obcaecati nisi nihil officiis dolorum tempora, aspernatur nostrum asperiores consequatur ex vero qui ad nam voluptatibus! Vitae nihil exercitationem impedit repellendus.</Left>
-          <Center>Center</Center>
-          <Right>Right</Right>
+        <Left>
+          <Language>
+            EN
+          </Language>
+          <SearchContainer>
+              input
+              <Search></Search>
+          </SearchContainer>
+        </Left>
+        <Center>Center</Center>
+        <Right>Right</Right>
       </Wrapper>
     </Container>
   );
