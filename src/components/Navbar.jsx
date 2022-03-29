@@ -12,6 +12,12 @@ const Wrapper = styled.div`
   justify-content: space-between;
 `;
 
+const Left = styled.div`
+  flex: 1;
+  display: flex;
+  align-items: center;
+`;
+
 const Language = styled.span`
   font-size: 14px;
   cursor: pointer;
@@ -19,11 +25,10 @@ const Language = styled.span`
 
 const SearchContainer = styled.div`
     border: 1px solid lightgray;
+    display: flex;
+    align-items: center;
 `;
 
-const Left = styled.div`
-  flex: 1;
-`;
 const Center = styled.div`
   flex: 1;
 `;
