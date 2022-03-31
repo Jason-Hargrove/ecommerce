@@ -7,6 +7,7 @@ const Container = styled.div`
   height: 100vh;
   display: flex;
   background-color: coral;
+  position: relative;
 `;
 
 const Arrow = styled.div`
@@ -17,6 +18,10 @@ const Arrow = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
 `
 
 const Slider = () => {
