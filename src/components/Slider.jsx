@@ -21,16 +21,18 @@ const Arrow = styled.div`
     position: absolute;
     top: 0;
     bottom: 0;
+    left: ${props=> props.direction === "left" && "10px"};
+    right: ${props=> props.direction === "right" && "10px"};
     margin: auto;
 `
 
 const Slider = () => {
   return (
     <Container>
-      <Arrow>
+      <Arrow direction="left">
         <ArrowLeftOutlinedIcon />
       </Arrow>
-      <Arrow>
+      <Arrow direction="right">
         <ArrowRightOutlinedIcon />
       </Arrow>
     </Container>
