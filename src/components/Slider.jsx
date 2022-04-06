@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import ArrowLeftOutlinedIcon from '@mui/icons-material/ArrowLeftOutlined';
-import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined';
+import ArrowLeftOutlinedIcon from "@mui/icons-material/ArrowLeftOutlined";
+import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";
 
 const Container = styled.div`
   width: 100%;
@@ -11,21 +11,21 @@ const Container = styled.div`
 `;
 
 const Arrow = styled.div`
-    width: 50px;
-    height: 50px;
-    background-color: #fff7f7;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: ${props=> props.direction === "left" && "10px"};
-    right: ${props=> props.direction === "right" && "10px"};
-    margin: auto;
-    cursor: pointer;
-    opacity: 0.5;
+  width: 50px;
+  height: 50px;
+  background-color: #fff7f7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: ${(props) => props.direction === "left" && "10px"};
+  right: ${(props) => props.direction === "right" && "10px"};
+  margin: auto;
+  cursor: pointer;
+  opacity: 0.5;
 `;
 const Wrapper = styled.div`
   height: 100%;
@@ -40,7 +40,7 @@ const Slide = styled.div`
 
 const ImgContainer = styled.div`
   height: 100%;
-  flex:1;
+  flex: 1;
 `;
 
 const Image = styled.img`
@@ -48,13 +48,13 @@ const Image = styled.img`
 `;
 
 const InfoContainer = styled.div`
-  flex:1;
+  flex: 1;
   padding: 50px;
 `;
 
-const Title = styled.h1``
-const Description = styled.h1``
-const Button = styled.h1``
+const Title = styled.h1``;
+const Desc = styled.h1``;
+const Button = styled.h1``;
 
 const Slider = () => {
   return (
@@ -64,9 +64,14 @@ const Slider = () => {
       </Arrow>
       <Wrapper>
         <Slide>
-        <ImgContainer></ImgContainer>
-          <Image src="/img/contaminate-your-block.jpg" />
-        <InfoContainer></InfoContainer>
+          <ImgContainer>
+            <Image src="/img/contaminate-your-block.jpg" />
+          </ImgContainer>
+          <InfoContainer>
+            <Title></Title>
+            <Desc></Desc>
+            <Button></Button>
+          </InfoContainer>
         </Slide>
       </Wrapper>
       <Arrow direction="right">
