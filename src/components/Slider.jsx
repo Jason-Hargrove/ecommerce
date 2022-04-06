@@ -52,9 +52,23 @@ const InfoContainer = styled.div`
   padding: 50px;
 `;
 
-const Title = styled.h1``;
-const Desc = styled.h1``;
-const Button = styled.h1``;
+const Title = styled.h1`
+  font-size: 78px;
+`;
+
+const Desc = styled.p`
+  margin: 50px 0px;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 3px;
+`;
+
+const Button = styled.button`
+  padding: 10px;
+  font-size: 20px;
+  background-color: transparent;
+  cursor: pointer;
+`;
 
 const Slider = () => {
   return (
@@ -68,9 +82,9 @@ const Slider = () => {
             <Image src="/img/contaminate-your-block.jpg" />
           </ImgContainer>
           <InfoContainer>
-            <Title></Title>
-            <Desc></Desc>
-            <Button></Button>
+            <Title>SUMMER SELL</Title>
+            <Desc>DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS</Desc>
+            <Button>SHOW NOW</Button>
           </InfoContainer>
         </Slide>
       </Wrapper>
