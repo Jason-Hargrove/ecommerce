@@ -6,7 +6,7 @@ const Container = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
-  background-color: coral;
+  /* background-color: coral; */
   position: relative;
 `;
 
@@ -49,7 +49,12 @@ const Image = styled.img`
 
 const InfoContainer = styled.div`
   flex:1;
+  padding: 50px;
 `;
+
+const Title = styled.h1``
+const Description = styled.h1``
+const Button = styled.h1``
 
 const Slider = () => {
   return (
@@ -58,9 +63,11 @@ const Slider = () => {
         <ArrowLeftOutlinedIcon />
       </Arrow>
       <Wrapper>
+        <Slide>
         <ImgContainer></ImgContainer>
-          <Image src="https://i.ibb.co/XsdmR2c/1.png" />
+          <Image src="/img/contaminate-your-block.jpg" />
         <InfoContainer></InfoContainer>
+        </Slide>
       </Wrapper>
       <Arrow direction="right">
         <ArrowRightOutlinedIcon />
