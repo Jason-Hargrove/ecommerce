@@ -8,6 +8,7 @@ const Container = styled.div`
   display: flex;
   /* background-color: coral; */
   position: relative;
+  overflow: hidden;
 `;
 
 const Arrow = styled.div`
@@ -29,6 +30,7 @@ const Arrow = styled.div`
 `;
 const Wrapper = styled.div`
   height: 100%;
+  display: flex;
 `;
 
 const Slide = styled.div`
@@ -82,7 +84,17 @@ const Slider = () => {
             <Image src="/img/contaminate-your-block.jpg" />
           </ImgContainer>
           <InfoContainer>
-            <Title>SUMMER SELL</Title>
+            <Title>SUMMER SALE</Title>
+            <Desc>DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS</Desc>
+            <Button>SHOW NOW</Button>
+          </InfoContainer>
+        </Slide>
+        <Slide>
+          <ImgContainer>
+            <Image src="/img/contaminate-your-block.jpg" />
+          </ImgContainer>
+          <InfoContainer>
+            <Title>SUMMER SALE</Title>
             <Desc>DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS</Desc>
             <Button>SHOW NOW</Button>
           </InfoContainer>
