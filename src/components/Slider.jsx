@@ -31,6 +31,7 @@ const Arrow = styled.div`
 const Wrapper = styled.div`
   height: 100%;
   display: flex;
+  transform: translateX(0vw);
 `;
 
 const Slide = styled.div`
@@ -38,6 +39,7 @@ const Slide = styled.div`
   height: 100vh;
   display: flex;
   align-items: center;
+  background-color: #${props=>props.bg};
 `;
 
 const ImgContainer = styled.div`
@@ -73,13 +75,19 @@ const Button = styled.button`
 `;
 
 const Slider = () => {
+
+  const handleClick = (direction) => {
+
+  }
+
+
   return (
     <Container>
-      <Arrow direction="left">
+      <Arrow direction="left" onClick={()=>handleClick("left")}>
         <ArrowLeftOutlinedIcon />
       </Arrow>
       <Wrapper>
-        <Slide>
+        <Slide bg="f5fafd">
           <ImgContainer>
             <Image src="/img/contaminate-your-block.jpg" />
           </ImgContainer>
@@ -89,18 +97,28 @@ const Slider = () => {
             <Button>SHOW NOW</Button>
           </InfoContainer>
         </Slide>
-        <Slide>
+        <Slide bg="fcf1ed">
           <ImgContainer>
             <Image src="/img/contaminate-your-block.jpg" />
           </ImgContainer>
           <InfoContainer>
-            <Title>SUMMER SALE</Title>
+            <Title>POPULAR SALE</Title>
+            <Desc>DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS</Desc>
+            <Button>SHOW NOW</Button>
+          </InfoContainer>
+        </Slide>
+        <Slide bg="fbf0f4">
+          <ImgContainer>
+            <Image src="/img/contaminate-your-block.jpg" />
+          </ImgContainer>
+          <InfoContainer>
+            <Title>WINTER SALE</Title>
             <Desc>DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS</Desc>
             <Button>SHOW NOW</Button>
           </InfoContainer>
         </Slide>
       </Wrapper>
-      <Arrow direction="right">
+      <Arrow direction="right" onClick={()=>handleClick("right")}>
         <ArrowRightOutlinedIcon />
       </Arrow>
     </Container>
