@@ -1,6 +1,8 @@
+import React, { useState } from 'react';
 import styled from "styled-components";
 import ArrowLeftOutlinedIcon from "@mui/icons-material/ArrowLeftOutlined";
 import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";
+import { sliderItems } from "../data";
 
 const Container = styled.div`
   width: 100%;
@@ -27,6 +29,8 @@ const Arrow = styled.div`
   margin: auto;
   cursor: pointer;
   opacity: 0.5;
+  z-index: 2;
+
 `;
 const Wrapper = styled.div`
   height: 100%;
@@ -75,7 +79,7 @@ const Button = styled.button`
 `;
 
 const Slider = () => {
-
+  const [slideIndex, set_slideIndex] = useState(0);
   const handleClick = (direction) => {
 
   }
@@ -87,36 +91,18 @@ const Slider = () => {
         <ArrowLeftOutlinedIcon />
       </Arrow>
       <Wrapper>
-        <Slide bg="f5fafd">
+        {sliderItems.map((item) => (
+        <Slide bg={item.bg}>
           <ImgContainer>
-            <Image src="/img/contaminate-your-block.jpg" />
+            <Image src={item.img} />
           </ImgContainer>
           <InfoContainer>
-            <Title>SUMMER SALE</Title>
-            <Desc>DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS</Desc>
+            <Title>{item.title}</Title>
+            <Desc>{item.dec}</Desc>
             <Button>SHOW NOW</Button>
           </InfoContainer>
         </Slide>
-        <Slide bg="fcf1ed">
-          <ImgContainer>
-            <Image src="/img/contaminate-your-block.jpg" />
-          </ImgContainer>
-          <InfoContainer>
-            <Title>POPULAR SALE</Title>
-            <Desc>DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS</Desc>
-            <Button>SHOW NOW</Button>
-          </InfoContainer>
-        </Slide>
-        <Slide bg="fbf0f4">
-          <ImgContainer>
-            <Image src="/img/contaminate-your-block.jpg" />
-          </ImgContainer>
-          <InfoContainer>
-            <Title>WINTER SALE</Title>
-            <Desc>DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS</Desc>
-            <Button>SHOW NOW</Button>
-          </InfoContainer>
-        </Slide>
+        ))}
       </Wrapper>
       <Arrow direction="right" onClick={()=>handleClick("right")}>
         <ArrowRightOutlinedIcon />
