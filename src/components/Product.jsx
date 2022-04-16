@@ -41,7 +41,6 @@ align-items: center;
 justify-content: center;
 `;
 
-
 const Icon = styled.div`
   width: 40px;
   height: 40px;
