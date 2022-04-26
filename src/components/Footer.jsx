@@ -4,8 +4,27 @@ const Container = styled.div`
 display: flex;
 `;
 
+const Logo = styled.h1`
+
+`;
+
+const Desc = styled.p`
+
+`;
+
+const SocialContainer = styled.div`
+
+`;
+
+const SocialIcon = styled.div`
+
+`;
+
 const Left = styled.div`
 flex: 1;
+display: flex;
+flex-direction: column;
+padding: 20px;
 `;
 
 const Center = styled.div`
@@ -29,16 +48,13 @@ const Footer = () => {
                    <Facebook />
                 </SocialIcon>
                 <SocialIcon>
-                   <Facebook />
+                   <Instagram />
                 </SocialIcon>
                 <SocialIcon>
-                   <Facebook />
+                   <Twitter />
                 </SocialIcon>
                 <SocialIcon>
-                   <Facebook />
-                </SocialIcon>
-                <SocialIcon>
-                   <Facebook />
+                   <Pintrest />
                 </SocialIcon>
             </SocialContainer>
         </Left>
