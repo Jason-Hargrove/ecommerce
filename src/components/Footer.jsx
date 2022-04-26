@@ -1,3 +1,10 @@
+import { 
+    Facebook, 
+    Instagram, 
+    Twitter, 
+    Pinterest 
+}  from '@mui/icons-material';
+
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -54,7 +61,7 @@ const Footer = () => {
                    <Twitter />
                 </SocialIcon>
                 <SocialIcon>
-                   <Pintrest />
+                   <Pinterest />
                 </SocialIcon>
             </SocialContainer>
         </Left>
