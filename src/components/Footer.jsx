@@ -11,27 +11,35 @@ const Container = styled.div`
 display: flex;
 `;
 
-const Logo = styled.h1`
-
-`;
-
-const Desc = styled.p`
-
-`;
-
-const SocialContainer = styled.div`
-
-`;
-
-const SocialIcon = styled.div`
-
-`;
-
 const Left = styled.div`
 flex: 1;
 display: flex;
 flex-direction: column;
 padding: 20px;
+`;
+
+const Logo = styled.h1`
+
+`;
+
+const Desc = styled.p`
+    margin: 20px 0px;
+`;
+
+const SocialContainer = styled.div`
+    display: flex;
+`;
+
+const SocialIcon = styled.div`
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    background-color: #${props=>props.color};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
 `;
 
 const Center = styled.div`
@@ -51,16 +59,16 @@ const Footer = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium harum quasi incidunt est consequuntur odit obcaecati eveniet nemo iste corporis. Atque quas rerum quidem labore, animi tenetur magnam possimus perspiciatis.
             </Desc>
             <SocialContainer>
-                <SocialIcon>
+                <SocialIcon color="3B5999">
                    <Facebook />
                 </SocialIcon>
-                <SocialIcon>
+                <SocialIcon color="E4405F">
                    <Instagram />
                 </SocialIcon>
-                <SocialIcon>
+                <SocialIcon color="55ACEE">
                    <Twitter />
                 </SocialIcon>
-                <SocialIcon>
+                <SocialIcon color="E60023">
                    <Pinterest />
                 </SocialIcon>
             </SocialContainer>
